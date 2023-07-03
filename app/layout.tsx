@@ -1,3 +1,4 @@
+import Navbar from './components/navbar/Navbar'
 import './globals.css'
 import { Nunito } from 'next/font/google'
 
@@ -17,7 +18,11 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={font.className}>{children}</body>
+      <body className={font.className} suppressHydrationWarning={true} >
+
+        <Navbar />
+        {children}
+      </body>
     </html>
   )
 }
